@@ -122,4 +122,7 @@ button:hover {
 
 #plinkoCanvas{
     background-color: rgb(18, 60, 114);
+    display: block;
+      width: 40%;
+      height: 90h; /* Ocupa a altura da janela inteira */
 }
