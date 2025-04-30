@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plinko Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+<!-- Menu Lateral -->
+<div id="sideMenu">
+  <div id="menuIcon" onclick="toggleMenu()">☰</div>
+  <h2>Menu</h2>
+  <h3>Valor Apostado:</h3>
+  <div>
+    Saldo: <span id="balance">0.00</span>
+    <input type="number" id="betAmount" value="1" min="0.01" step="0.01" style="width: 80px;">
+    <br><br>
+    <button onclick="dropBall()">Jogar</button>
+    <button onclick="confirmPlayAll()">Jogar Tudo</button>
+  </div>
+
+  <div id="depositArea">
+    <p>Depositar: <input type="number" id="depositInput" min="0.01" step="0.01" value="10">
+      <br>
+      <br>
+    <button onclick="deposit()">Depositar</button></p>
+  </div>
+</div>
+</div>
+
+  <!-- MODAL DE CONFIRMAÇÃO -->
+  <div id="confirmationModal" class="modal-overlay">
+    <div class="modal-content">
+      <p>Tem certeza que deseja apostar todo o saldo?</p>
+      <button onclick="playAll()">Sim</button>
+      <button onclick="closeModal()">Cancelar</button>
+    </div>
+  </div>
+
+  <canvas id="plinkoCanvas" width="700" height="800"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
